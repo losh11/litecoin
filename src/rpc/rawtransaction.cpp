@@ -1134,6 +1134,7 @@ UniValue signrawtransaction(const JSONRPCRequest& request)
         // If we have made it this far, then wallet is disabled and no private keys were given, so fail here.
         throw JSONRPCError(RPC_INVALID_PARAMETER, "No private keys available.");
 #endif
+    }
 }
 
 static UniValue sendrawtransaction(const JSONRPCRequest& request)
