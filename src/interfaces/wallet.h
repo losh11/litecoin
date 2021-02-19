@@ -80,10 +80,10 @@ public:
     virtual std::string getWalletName() = 0;
 
     // Get key from pool.
-    virtual bool getKeyFromPool(bool internal, CPubKey& pub_key) const = 0;
+    virtual bool getKeyFromPool(bool internal, CPubKey& pub_key) = 0;
 
     //! Get public key.
-    virtual bool getPubKey(const CKeyID& address, CPubKey& pub_key) = 0;
+    virtual bool getPubKey(const CKeyID& address, CPubKey& pub_key) const = 0;
 
     //! Get private key.
     virtual bool getPrivKey(const CKeyID& address, CKey& key) = 0;
