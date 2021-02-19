@@ -532,7 +532,6 @@ public:
     bool IsEquivalentTo(const CWalletTx& tx) const;
 
     bool InMempool() const;
-    bool IsTrusted(interfaces::Chain::Lock& locked_chain) const;
     bool InMempoolDirect() const;
     bool IsTrusted(interfaces::Chain::Lock& locked_chain, bool directMemCheck = false) const;
 
