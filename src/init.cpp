@@ -1381,7 +1381,7 @@ bool AppInitMain(InitInterfaces& interfaces)
     }
     
     if (gArgs.GetArg("-omniuseragent", true)) {
-        uacomments.emplace(uacomments.begin(), OMNI_CLIENT_NAME, + ":" + FormatVersion(OMNI_USERAGENT_VERSION));
+        uacomments.emplace(uacomments.begin(), OMNI_CLIENT_NAME + ":" + FormatVersion(OMNI_USERAGENT_VERSION));
         if (gArgs.GetBoolArg("-experimental-ltc-balances", DEFAULT_ADDRINDEX)) {
             uacomments.push_back("bitcore");
         }
