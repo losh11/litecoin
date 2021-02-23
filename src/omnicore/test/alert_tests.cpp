@@ -19,7 +19,7 @@ BOOST_FIXTURE_TEST_SUITE(omnicore_alert_tests, BasicTestingSetup)
 BOOST_AUTO_TEST_CASE(alert_positive_authorization)
 {
     // Confirm authorized sources for mainnet
-    BOOST_CHECK(CheckAlertAuthorization("")); // TODO(losh11): litecoin exodus
+    BOOST_CHECK(CheckAlertAuthorization("LTceXoduS2cetpWJSe47M25i5oKjEccN1h"));
 }
 
 BOOST_AUTO_TEST_CASE(alert_unauthorized_source)
@@ -40,7 +40,7 @@ BOOST_AUTO_TEST_CASE(alert_manual_sources)
 
     // Then ignore some sources explicitly
     gArgs.ForceSetArgs("-omnialertignoresender", {"1JwSSubhmg6iPtRjtyqhUYYH7bZg3Lfy1T", "16oDZYCspsczfgKXVj3xyvsxH21NpEj94F"});
-    BOOST_CHECK(CheckAlertAuthorization("")); // should still be authorized // TODO(losh11): litecoin exocus
+    BOOST_CHECK(CheckAlertAuthorization("LTceXoduS2cetpWJSe47M25i5oKjEccN1h")); // should still be authorized
     BOOST_CHECK(!CheckAlertAuthorization("1JwSSubhmg6iPtRjtyqhUYYH7bZg3Lfy1T"));
     BOOST_CHECK(!CheckAlertAuthorization("16oDZYCspsczfgKXVj3xyvsxH21NpEj94F"));
 

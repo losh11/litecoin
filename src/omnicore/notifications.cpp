@@ -88,7 +88,7 @@ bool CheckAlertAuthorization(const std::string& sender)
     std::set<std::string> whitelisted;
 
     // Mainnet
-    whitelisted.insert(""); // TODO(losh11): fill in with litecoin multisig address
+    whitelisted.insert("MJDAXHQMxdRfKS2b3hECsSCf4iyx1G8CCT");
 
     // Testnet / Regtest
     // use -omnialertallowsender for testing
